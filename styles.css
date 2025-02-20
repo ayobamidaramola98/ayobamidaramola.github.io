@@ -26,9 +26,7 @@ header {
   z-index: 1000;
 }
 .header-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  text-align: center;
 }
 header h1 {
   margin-bottom: 10px;
@@ -38,6 +36,7 @@ nav ul {
   list-style: none;
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 nav ul li {
   margin: 0 15px;
@@ -127,42 +126,40 @@ nav ul li a:hover {
   font-size: 1em;
 }
 
-/* Research & Projects */
-.projects {
+/* Research Section */
+.research-details {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  flex-direction: column;
+  gap: 20px;
 }
-.project {
-  flex: 0 0 32%;
-  background: #fff;
-  margin-bottom: 20px;
-  padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.project:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-.project h4 {
-  margin-bottom: 15px;
+.research-item h3 {
   color: #e74c3c;
+  margin-bottom: 10px;
 }
-.project p {
-  font-size: 0.95em;
+.research-item p {
+  font-size: 1em;
   line-height: 1.6;
 }
 
-/* Publications */
-.publications-list {
-  list-style: disc inside;
-  margin-left: 20px;
+/* Publications Table */
+.publications-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
 }
-.publications-list li {
-  margin-bottom: 10px;
-  font-size: 1em;
+.publications-table th,
+.publications-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  vertical-align: top;
+}
+.publications-table th {
+  background: #2c3e50;
+  color: #fff;
+  text-align: left;
+}
+.publications-table td strong {
+  color: #2c3e50;
 }
 
 /* News Section */
@@ -176,7 +173,7 @@ nav ul li a:hover {
   padding: 20px;
   border-left: 4px solid #e74c3c;
   border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 .news-item h4 {
   margin-bottom: 10px;
@@ -213,7 +210,6 @@ nav ul li a:hover {
   font-size: 1em;
 }
 #contact button {
-  display: block;
   width: 100%;
   background: #e74c3c;
   color: #fff;
@@ -246,22 +242,5 @@ footer p {
   }
   nav ul li {
     margin: 10px 0;
-  }
-  .projects {
-    flex-direction: column;
-  }
-  .project {
-    flex: 0 0 100%;
-  }
-}
-@media (max-width: 480px) {
-  header h1 {
-    font-size: 1.8em;
-  }
-  .hero-content h2 {
-    font-size: 2em;
-  }
-  .hero-content p {
-    font-size: 1.2em;
   }
 }
