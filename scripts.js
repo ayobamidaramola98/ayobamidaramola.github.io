@@ -1,4 +1,4 @@
-/* Smooth Scrolling for Navigation */
+// Smooth Scrolling for Navigation Links
 document.addEventListener('DOMContentLoaded', function() {
   const navLinks = document.querySelectorAll('nav ul li a');
   navLinks.forEach(link => {
@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
       const targetSection = document.getElementById(targetId);
       if (targetSection) {
         window.scrollTo({
-          top: targetSection.offsetTop - 60, // Adjust for header height
+          top: targetSection.offsetTop - 60,
           behavior: 'smooth'
         });
       }
@@ -16,13 +16,11 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
-/* Basic Contact Form Handling */
+// Basic Contact Form Handler (for demonstration)
 const contactForm = document.getElementById('contact-form');
 if (contactForm) {
   contactForm.addEventListener('submit', function(e) {
     e.preventDefault();
-    // Here you can integrate with a backend service or Formspree.
-    // For now, we simulate a successful submission.
     alert('Thank you for your message! I will get back to you soon.');
     contactForm.reset();
   });
